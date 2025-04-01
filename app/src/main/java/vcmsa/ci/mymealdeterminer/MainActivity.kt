@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
+// these are all the declarations i will be using in my project.
         val rbMorning = findViewById<RadioButton>(R.id.rbMorning)
         val rbMidmorning = findViewById<RadioButton>(R.id.rbMidMorning)
         val rbAfternoon = findViewById<RadioButton>(R.id.rbAfternoon)
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val btnReset = findViewById<Button>(R.id.btnReset)
         val txtResults = findViewById<TextView>(R.id.txtResults)
 
-
+// the code bellow is for the 'determining' button. When the end user presses it, after selecting a specific time, a specific snack or meal will be displayed to the end user.
         btnDetermine.setOnClickListener {
 
             val selectedTimeofday = findViewById<RadioButton>(rgTimeofday.checkedRadioButtonId)
@@ -65,8 +65,9 @@ class MainActivity : AppCompatActivity() {
                 txtResults.text = "Dessert: ice cream"
             }
 
-            println("$txtResults")
+            println("$txtResults") //this variable will display the certain meal or snack depending on what the client selected.
         }
+        // The code below is for my 'clear' button. This button will clear what was displayed to the end user and clear what was selected.
         btnReset.setOnClickListener {
             txtResults.text = ""
             rgTimeofday.clearCheck()
