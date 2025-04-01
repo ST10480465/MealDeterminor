@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rgTimeofday"
+        android:layout_width="377dp"
+        android:layout_height="304dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbMorning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Morning" />
+
+        <RadioButton
+            android:id="@+id/rbMidMorning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mid-morning" />
+
+        <RadioButton
+            android:id="@+id/rbAfternoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Afternoon" />
+
+        <RadioButton
+            android:id="@+id/rbMidafternoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mid-Afternoon" />
+
+        <RadioButton
+            android:id="@+id/rbDinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:textAlignment="viewStart" />
+
+        <RadioButton
+            android:id="@+id/rbAfterdinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="After Dinner"
+            android:textAlignment="viewStart" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="391dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="27dp"
+        android:text="Time Of Day"
+        android:textAlignment="center"
+        android:textColor="#040304"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rgTimeofday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDetermine"
+        android:layout_width="143dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="65dp"
+        android:text="Determine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="137dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="65dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDetermine" />
+
+    <TextView
+        android:id="@+id/txtResults"
+        android:layout_width="358dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetermine"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="391dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:text="meal/snack of choice"
+        android:textAlignment="center"
+        android:textColor="#040304"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtResults"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
